@@ -50,3 +50,31 @@
     window.addEventListener('load', toggleScrolled);
   
   })();
+
+
+
+  
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".carousel-item").forEach(function (item) {
+      item.addEventListener("click", function () {
+        let icon = this.querySelector(".icon_cilck");
+        if (icon && !icon.classList.contains("hidle_icon")) {
+          icon.classList.add("hidle_icon"); // เริ่ม animation
+          setTimeout(() => {
+            icon.classList.add("hidle_icon_end"); // ซ่อน element หลังจาก animation จบ
+          }, 500); // 500ms เท่ากับเวลา animation
+        }
+      });
+    });
+  });
+  
+
+  document.getElementById("downloadBtn").addEventListener("click", function() {
+    const link = document.createElement("a");
+    link.href = "include/img/QR.jpg";
+    link.download = "QR.jpg"; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
