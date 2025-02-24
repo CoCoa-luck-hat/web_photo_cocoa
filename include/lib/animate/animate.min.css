@@ -67,25 +67,26 @@
 
 @keyframes pulse {
     0% {
-        transform: scaleX(1)
+        transform: scaleX(1) translate(-50%, -50%)
     }
 
     50% {
-        transform: scale3d(1.05, 1.05, 1.05)
+        transform: scale3d(1.1, 1.1, 1.1)translate(-50%, -50%)
     }
 
     to {
-        transform: scaleX(1)
+        transform: scaleX(1) translate(-50%, -50%)
     }
 }
 
 .pulse {
     animation-name: pulse
+    
 }
 
 @keyframes rubberBand {
     0% {
-        transform: scaleX(1)
+        transform: scaleX(1) 
     }
 
     30% {
